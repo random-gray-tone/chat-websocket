@@ -1,0 +1,752 @@
+
+*{  
+    transition: 200ms;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+:root{
+    font-size: 20px;
+}
+body{
+    
+    background-color: rgb(1, 1, 27);
+    color: aliceblue;
+    min-height: 100vh;
+   
+}
+.container{
+    user-select: none;
+   justify-self: center;
+    padding-top: 100px;
+    transition:  800ms;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1000;
+    
+}
+.login{
+    transition: 800ms;
+    width: 100%;
+    max-width: 330px;
+    background-color: rgb(60, 58, 77);
+    border-radius: 20px;
+    padding: 20px;
+    flex-direction: column;
+    transition: 200ms;
+}
+.login>h2{
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+.login__form{
+    
+    
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.Login__button{
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 0.5rem;
+    font-weight: 700;
+    background-color: rgb(156, 153, 153);
+    cursor: pointer;
+    color: black;
+}
+.Login__input{
+    background-color: rgb(49, 48, 48);
+    border: none;
+    padding: 15px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: aliceblue;
+    outline: none;
+    border-radius: 5px;
+}
+.Login__input:focus{
+    outline: 2px solid beige;
+}
+.Login__button:hover{
+    background-color: white;
+}
+.chat{
+    
+    z-index: 1;
+    margin-top: 90px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width:100%;
+    height: calc(100vh - 50px);
+    
+    
+    
+}
+.chat__messages{
+    transition: 400ms;
+   width: auto;
+   padding: 30px 30px 90px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+   z-index: 1;
+    height: 100%;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    /*justify-content: flex-end;*/
+}
+.chat__form{
+    user-select: none;
+    background-color: #191919;
+    left: 0;
+    bottom: 2px;
+    display: none;
+    align-items: center;
+    gap: 10px;
+    position: fixed;
+    z-index: 2001;
+    width: 100%;
+    border-radius: 15px 15px 0px 0px;
+    padding: 10px;
+}
+.chat__input{
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    flex-grow: 1;
+    /*background-color: #212121;*/
+    background-color: rgb(73, 63, 82);
+    outline: none;
+    color: #f2f2f2;
+    font-size: 1rem;
+}
+
+.chat__button{
+    border: none;
+    background:none;
+    color: bisque;
+    cursor: pointer;
+
+}
+.chat__button:hover{
+    color:#696969;
+}
+.chat__button>span{
+    font-size: 1.8rem;
+}
+
+.chat__messages>div{
+
+    padding: 10px;
+    width: 100%;
+    max-width: 250px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+    line-height: 22px;
+    margin-top: 30px;
+    
+    
+    
+}
+
+.message--self{
+    right: 0px;
+    background-color: #ddd;
+    color: black;
+    border-radius: 10px 10px 0px 10px;
+    align-self: flex-end;
+    word-wrap: break-word;
+    
+}
+.message--other{
+    left: 0px;
+    background-color: #333;
+    color: #f2f2f2;
+    border-radius: 0px 10px 10px 10px;
+    align-self: flex-start;
+    word-wrap: break-word;
+    
+}
+.message--sender{
+    justify-self: flex-start;
+    display: block;
+    margin-bottom: 15px;
+    font-weight:700 ;
+    color: cadetblue;
+    margin-left: 10px;
+}
+
+
+.online{
+    padding: 15px;
+    color: aqua;
+    bottom: 95%;
+    left: 2%;
+    width: auto;
+    height: 100%;
+    background-color: rgb(55, 11, 216) ;
+    text-align: center;
+    border-radius: 5px 5px 20px 5px;
+    display: none;
+    align-items: center;
+    justify-content: left;
+    
+}
+.digitando{
+    margin-left: 120px;
+    margin-top: 10px;
+    background-color: #333;
+    color: #f2f2f2;
+    
+    width: 0px;
+    height: 30px;
+    
+    
+   
+    text-align: center;
+    font-size: 1em;
+    padding: 15px;
+    display: none;
+      background-color: #837b7b;
+    color: #f2f2f2; 
+        border-radius: 7px 23px 23px 23px;
+
+    
+    white-space: nowrap;
+    position: fixed;
+    transition: 500ms;
+    justify-self: flex-end;
+    justify-content: center;
+    align-items: center;
+    transition: width 1s ease-in-out;
+}
+.info{
+  
+    position:fixed;
+    top: 0;
+     width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    background-color: rgb(37, 6, 150);
+    border-radius: 0px 0px 10px 10px;
+    opacity: 0.80;
+    z-index: 100;
+    
+}
+.Sistema{
+     background-color: #7f5daa;
+    color: #f2f2f2;
+    width: 20px;
+    border-radius: 0px 10px 10px 10px;
+
+    word-wrap: break-word;
+    display: flex;
+    z-index: 1000;
+    
+}    
+.criarRoom{
+    
+    color: #c4c4c4;
+    cursor: pointer;
+}
+.criarRoom:hover{
+    color: #966dca;
+}
+#criar{
+    border-radius: 20px;
+    padding: 30px;
+    display: none;
+    flex-direction: column;
+}
+#criar>span{
+    
+    margin-left: 100%;
+    justify-self: flex-end,
+    
+}
+#fecharcriarRoom:hover{
+    cursor:pointer;
+    color: red;
+}
+.criar__input{
+     background-color: rgb(49, 48, 48);
+    border: none;
+    padding: 15px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: aliceblue;
+    outline: none;
+    border-radius: 5px;
+}
+#user{
+    
+    
+    justify-content: space-between;
+    border-radius: 10px 0px 10px;
+    display: flex;
+    flex-direction:row;
+    
+    
+    width: auto;
+    height: auto;
+    background-color: rgb(68, 0, 255);
+    color: white;
+    
+    transition: 200ms;
+    padding: 8px;
+}
+
+.Foto{
+    justify-self: grid;
+    border-radius: 30px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 290px;
+    height: auto;
+    color: #dad5d5;
+    background-color: #494949;
+    padding: 5px;
+   
+}
+.Foto>h2{
+    margin-top: 10px;
+    justify-self: center;
+}
+.customizarfotoperfil{
+    
+    margin-top: 10px;
+    background-color: #5c3a88;
+    padding: 6px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #c2c1c1;
+    justify-self: center;
+    font-weight: bolder;
+}
+.customizarfotoperfil:hover{
+    
+    border-radius: 10px;
+    background-color: #c2c1c1;
+    color: #4d00b1;
+}
+.confirmar{
+    font-weight: bolder;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+    background-color: #272626;
+    border-radius: 4px 15px 4px 15px;
+    padding: 15px;
+    width: auto;
+    height: auto;
+    cursor: pointer;
+}
+.confirmar:hover{
+    background-color: #191919;
+    
+}
+.selecionarfoto{
+    border: 3px solid black;
+    display: flex;
+    font-size: x-large;
+    justify-self: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    background-color: #7f5daa;
+    
+}
+.fechar{
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #353333;
+    
+    
+    justify-self: end;
+
+    cursor: pointer;
+}
+.fechar:hover{
+    background-color: rgba(158, 80, 106, 0.541);
+}
+.options{
+    
+    font-size: 70%;
+    
+    border-radius: 10px;
+    background-color: rgb(188, 72, 255);
+    width: 100%;
+    height: 100%;
+    margin-top: 10px;
+    transition: 5000ms;
+    display: none;
+    position: relative;
+    z-index: 1000;
+}
+.optionsvisivel{
+    font-size: 70%;
+    padding: 3px;
+    border-radius: 3px  10px 10px 10px;
+    background-color: rgb(76, 40, 255);
+    width: auto;
+    height: auto;
+    margin-top: 10px;
+    transition: 5000ms;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.opcao{               
+    
+    white-space: nowrap;
+    background-color: #5a1ea8;
+    cursor: pointer;
+    width: 100%;
+    height: 20px;
+    border-radius: 0px 10px 10px 10px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding: 7px;
+    margin-top: 5px;
+    
+}
+.opcao:hover{
+    background-color:#3b1270 ;
+}
+#user>span{
+    margin-left:7px ;
+    width: auto;
+    height: auto;
+    border-radius: 10px;
+    background-color: #4d00b1;
+    align-self: flex-end;
+    
+}
+#user>h4{
+    justify-self: flex-start;
+    align-self: flex-start;
+}
+#foto{
+    width: 30px;
+    height: 30px;
+    align-self: flex-start;
+    border-radius: 50%;
+    background-color: #191919;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    cursor: pointer;
+}
+#foto:hover{
+    border: 2px solid rgb(255, 0, 200);
+}
+#containeroptions{
+    user-select: none;
+    display: none;
+    top: 0px;
+    right: 0px;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    align-items: center;
+    max-width: 24vh;
+    height: auto;
+    padding: 15px;
+    height:min-content;
+    border-radius: 17px 9px 0px 17px;
+    background-color: rgb(68, 0, 255);
+    transition: 1s ease-in-out;
+    z-index: 2000;
+    
+}
+
+.zoomfotoperfil{
+    backdrop-filter: blur(10px);
+    
+    display: none;
+    flex-direction: row;
+    background-color: #837b7b;
+    border-radius: 15px;
+    padding: 40px;
+    
+    
+
+}
+.zoomfotoperfil>span{
+   height: 10px;
+   cursor: pointer;
+
+   justify-self: flex-end;
+   
+}
+.zoomfotoperfil>span:hover{
+    color: red;
+}
+#fotoampliada{
+    
+    border: 2px solid rgb(255, 255, 255);
+    width:30vw;
+    min-width: 350px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    font-size: 10em;
+    aspect-ratio: 1/1;
+    background-color: #6c00f8;
+    border-radius: 50%;
+    justify-self: center;
+    
+}
+.zoomfotoperfil>h2{
+    font-weight: bolder;
+    
+    margin-bottom: 20px;
+    justify-self: center;
+}
+.message--fotoperfil{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bolder;
+    border-radius: 50%;
+    justify-self: flex-start;
+    background-color: #4d00b1;
+    width: 40px;
+    height: 40px;
+
+}
+.containerdados{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+}
+#alterarnome{
+    padding: 30px;
+    display: none;
+    width: auto;
+    height: auto;
+    background-color: #4d00b1;
+    border-radius: 20px;
+    flex-direction: column;
+}
+#alterarnome>input{
+    border-radius: 5px;
+    padding: 3px;
+    border: none;
+    font-weight: bolder;
+    outline: none;
+}
+#alterarnome>input:focus{
+    background-color: #afafaf;
+    color: #000000;
+}
+#alterarnome>span{
+    align-self: flex-end;
+    cursor: pointer;
+}
+#alterarnome>span:hover{
+    color:red;
+}
+.chat__form>span{
+    font-size: x-large;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.chat__form>span:hover{
+    color: #696969;
+}
+#sendimage{
+    padding: 20px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(60, 58, 77);
+    border-radius: 10px;
+}
+#sendimage>div{
+    border-radius: 10px;
+    background-color: #696969;
+    width: 350px;
+    height: 350px;
+    margin-top: 10px;
+}
+#sendimage>span{
+    align-self: flex-end;
+    cursor: pointer;
+}
+#sendimage>span:hover{
+    color: red;
+}
+#sendimage>label{
+    text-align: center;
+    background-color: #191919;
+    margin-top: 10px;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+
+}
+#sendimage>label:hover{
+    background-color: #000000;
+}
+#sendimage>button{
+    margin-top: 10px;
+    padding: 5px;
+    border-radius:5px;
+    outline: none;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+}
+#sendimage>button:hover{
+    background-color: black;
+    color: white;
+}
+.mostrarimagens{
+    width: 200px;
+    height: 250px;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+.image--self{
+    
+    right: 0px;
+    background-color: #ddd;
+    color: black;
+    border-radius: 10px 10px 0px 10px;
+    align-self: flex-end;
+    word-wrap: break-word;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.image--other{
+    padding: 10px;
+    left: 0px;
+    background-color: #333;
+    color: #f2f2f2;
+    border-radius: 0px 10px 10px 10px;
+    align-self: flex-start;
+    word-wrap: break-word;
+}
+.image--other>span{
+    align-self: flex-start;
+}
+.image--self>span{
+    align-self: flex-start;
+}
+
+  #emotescontainer{
+    opacity: 0;
+     position: sticky;
+      padding: 30px;
+       width: 400px;
+        
+        max-height: 300px;
+        background-color: #494949; 
+        display: none; 
+        grid-template-columns: repeat(10 , 1fr);
+        
+         grid-auto-rows: 40px;
+         gap: 0px; 
+         row-gap: 0px;
+          bottom: 0px; 
+          top: 300px;
+           z-index: 3000;
+            bottom: -350px;
+             border-radius: 15px;
+              overflow-y: scroll; 
+              transition: bottom 0.3s ease, opacity 0.3s ease;
+              scrollbar-color: #f77dfc #3a3131;
+              
+            
+}
+
+.emotes{ 
+    display: flex;
+     align-items: center; 
+     justify-content: center;
+      border-radius: 3px; 
+      width: 30px; 
+      height: 30px;
+       background-color: #837b7b;
+        cursor: pointer;
+
+}
+
+
+
+
+.emotes{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    width: 30px;
+    height: 30px;
+    background-color: #837b7b;
+    cursor: pointer;
+}
+.emotes:hover{
+    background-color: #272626;
+    border-radius: 12px;
+}
+#emotescontainer>span{
+    cursor: pointer;
+    
+    justify-self: flex-start;
+    align-self: flex-start;
+}
+#emotescontainer>span:hover{
+    color: red;
+}
+.zoomfotoperfilmensagem{
+    backdrop-filter: blur(10px);
+    
+    display: none;
+    flex-direction: row;
+    background-color: #837b7b;
+    border-radius: 15px;
+    padding: 40px;
+}
+.zoomfotoperfilmensagem>span:hover{
+    color: red;
+}

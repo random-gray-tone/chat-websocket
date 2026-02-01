@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat online</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@24,400,0,0" />
+    
+</head>
+<body>
+
+    <section class="container">
+
+        <section class="login" id="login">
+
+            <h2>Login</h2>
+            <form class="login__form">
+
+                <input type="text" class="Login__input" placeholder="Insira seu nome" required>
+                <input type="text" class="Login__input" id="codigoroom" placeholder="Insira a senha da sala" required>
+                <div class="criarRoom">Criar Sala</div>
+                <button type="submit" class="Login__button">Entrar</button>
+
+            </form>
+
+        </section>
+        <section class="login" id="criar" >
+            <span id="fecharcriarRoom" class="material-symbols-sharp">
+                close_small
+            </span>
+                <h2>Criar Sala</h2>
+            <form class="login__form" id="criar__form">
+                <input type="text" class="criar__input" placeholder="Insira seu nome." required>
+                <input type="text" class="criar__input" id="codigo" placeholder="Crie uma senha para a sala" required>
+                <button type="submit" class="Login__button">Criar Sala</button>
+
+            </form>
+        </section>
+        <section class="zoomfotoperfil">
+            <span id="fecharfotoampliada" class="material-symbols-sharp">
+                close_small
+            </span>
+            <h2></h2>
+            
+            <div id="fotoampliada"></div>
+       
+        </section>
+
+        <section  class="zoomfotoperfilmensagem">
+            <span id="fecharfotoampliadamessage" class="material-symbols-sharp">
+                close_small
+            </span>
+            <h2></h2>
+            
+            <div id="fotoampliada"></div>
+       
+        </section>
+
+        <section class="Foto">
+            <div id="fecharselecaodefoto" class="fechar">
+                <span  class="material-symbols-sharp">
+                    close_small
+           </span>
+                    
+                
+            </div>
+            <div class="Foto">
+
+
+            </div>
+            
+            
+            <div class="selecionarfoto"></div>
+            <label for="Fotoperfil" class="customizarfotoperfil">Selecionar arquivo</label>
+            <input style="display: none;" type="file" name="Fotoperfil" id="Fotoperfil">
+            <div class="confirmar">CONFIRMAR</div>
+
+        </section>
+        <section id="alterarnome">
+            <span class="material-symbols-sharp">
+                close_small
+            </span>
+            <h2>Mudar nome de usuário</h2>
+            <input type="text" placeholder="Insira seu novo nome de usuário" required>
+            <div class="confirmar">CONFIRMAR</div>
+        </section>
+
+        <section id="sendimage">
+            <span class="material-symbols-sharp">
+                close_small
+            </span>
+            <h2>selecione sua imagem</h2>
+            <div></div>
+            <input style="display: none;" type="file" name="fotoenviar"  id="fotoenviar">
+            <label for="fotoenviar">Escolher foto</label>
+            <button>
+                <div class="material-symbols-outlined" for="fotoenviar"> send</div>
+            </button>
+            
+        </section>
+
+        </section>
+        
+        <div class="info" >
+            <div class="online">Online: 0</div>
+            <div class="digitando">Alguem está digitando.........</div>
+            <div id="containeroptions">
+                
+            <div id="user">
+                
+                    
+                    <div id="foto"></div> 
+                    
+                    <span class="material-symbols-outlined">
+                        arrow_drop_down
+                     </span>     
+                
+                     
+
+
+                
+               
+                
+            </div>
+            <div class="options"id="options">
+                    <div id="mudarfoto" class="opcao">Alterar Foto de Perfil</div>
+                    <div id="mudarnome" class="opcao">Alterar nome</div>
+                    <div id="sairdasala" class="opcao">Sair da sala</div>
+                </div>
+        </div>
+            
+                
+               
+        
+
+        <section class="chat">
+
+            <section class="chat__messages">
+               <!--<div class="sistema"></div>--> 
+                
+                <!--<div class="message--self">Hello word</div>
+                <div class="message--other">
+                    <span class="message--sender">Manual do dev</span>
+                    Ola mundo
+                </div>-->
+                
+            </section>
+
+            <div id="emotescontainer">
+                    <span class="material-symbols-sharp">
+                        close_small
+                    </span>
+                   <div id="128514" class="emotes">&#128514</div>
+                   <div id="128517" class="emotes">&#128517</div>
+                   <div id="128077" class="emotes">&#128077</div>
+                   <div id="128525" class="emotes">&#128525</div>
+                   <div id="128530" class="emotes">&#128530</div>
+                   <div id="128532" class="emotes">&#128532</div>
+                   <div id="128536" class="emotes">&#128536</div>
+                   <div id="128545" class="emotes">&#128545</div>
+                   <div id="128548" class="emotes">&#128548</div>
+                   <div id="128557" class="emotes">&#128557</div>
+                   <div id="128563" class="emotes">&#128563</div>
+                   <div id="128566" class="emotes">&#128566</div>
+                   <div id="128078" class="emotes">&#128078</div>
+                   <div id="128405" class="emotes">&#128405</div>
+                   <div id="128127" class="emotes">&#128127</div>
+                    <div id="128148" class="emotes">&#128148</div>
+                    <div id="129305" class="emotes">&#129305</div>
+                    <div id="128170" class="emotes">&#128170</div>
+                    <div id="128079" class="emotes">&#128079</div>
+                    <div id="128133" class="emotes">&#128133</div>
+                    <div id="129309" class="emotes">&#129309</div>
+                    <div id="128128" class="emotes">&#128128</div>
+                    <div id="129313" class="emotes">&#129313</div>
+                    <div id="128123" class="emotes">&#128123</div>
+                    <div id="128139" class="emotes">&#128139</div>
+                    <div id="128169" class="emotes">&#128169</div>
+                    <div id="128683" class="emotes">&#128683</div>
+                    <div id="128035" class="emotes">&#128035</div>
+                    <div id="128054" class="emotes">&#128054</div>
+                    <div id="128053" class="emotes">&#128053</div>
+                    <div id="128055" class="emotes">&#128055</div>
+                    <div id="127866" class="emotes">&#127866</div>
+                    <div id="127828" class="emotes">&#127828</div>
+                    <div id="127829" class="emotes">&#127829</div>
+                    <div id="127852" class="emotes">&#127852</div>
+                    <div id="127853" class="emotes">&#127853</div>
+                    <div id="129472" class="emotes">&#129472</div>
+                    <div id="127814" class="emotes">&#127814</div>
+                    <div id="129361" class="emotes">&#129361</div>
+                    <div id="127813" class="emotes">&#127813</div>
+                    <div id="127860" class="emotes">&#127860</div>
+                    <div id="127820" class="emotes">&#127820</div>
+                    <div id="127815" class="emotes">&#127815</div>
+                    <div id="127826" class="emotes">&#127826</div>
+                    <div id="127942" class="emotes">&#127942</div>
+                    <div id="127941" class="emotes">&#127941</div>
+                    <div id="127918" class="emotes">&#127918</div>
+                    <div id="127758" class="emotes">&#127758</div>
+                    <div id="127774" class="emotes">&#127774</div>
+                    <div id="127769" class="emotes">&#127769</div>
+                    <div id="127752" class="emotes">&#127752</div>
+                    <div id="128184" class="emotes">&#128184</div>
+                    <div id="128270" class="emotes">&#128270</div>
+                    <div id="128286" class="emotes">&#128286</div>
+                    <div id="128165" class="emotes">&#128165</div>
+                    <div id="128166" class="emotes">&#128166</div>
+                    
+                        </div>
+
+            <form class="chat__form">
+                <span id="emotesescolher" class="material-symbols-sharp">
+                    add_reaction
+                </span>
+                
+                <input type="text" class="chat__input" placeholder="Escreva sua mensagem" required>
+                <span id="enviarfoto" class="material-symbols-sharp">
+                        add_photo_alternate
+                    </span>
+                <button type="submit" class="chat__button">
+                    
+                    <span class="material-symbols-outlined">
+                        send
+                    </span>
+                        
+                  
+            </button>
+
+            </form>
+
+        </section>
+
+    </section>
+
+    <script src="/frontend/script/script.js"></script>
+</body>
+</html>
