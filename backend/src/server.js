@@ -1,4 +1,5 @@
 
+const http= require("http")
 const  {WebSocketServer } = require("ws")
 const dotenv = require("dotenv")
 
@@ -9,8 +10,16 @@ let roons=[]
 
     
 
-   
-const wss= new WebSocketServer({port:process.env.PORT ||8080})
+   const server = http.createServer((req, res) => {
+  res.writeHead(200)
+  res.end("WebSocket server is running")
+})
+const PORT=process.env.PORT||8080
+
+server.listen(PORT, () => {
+  console.log("Servidor rodando na porta", PORT)
+})
+const wss= new WebSocketServer({server})
 wss.on("connection",(ws)=>{
     
     
