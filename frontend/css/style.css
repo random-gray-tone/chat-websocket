@@ -517,7 +517,7 @@ body{
 #fotoampliada{
     
     border: 2px solid rgb(255, 255, 255);
-    width:30vw;
+    width:100%;
     min-width: 350px;
     display: grid;
     align-items: center;
@@ -740,9 +740,8 @@ body{
 }
 .zoomfotoperfilmensagem{
     backdrop-filter: blur(10px);
-    width:70vw;
+    width:90vw;
     height:auto;
-    max-width:200px;
     display: none;
     flex-direction: row;
     background-color: #837b7b;
