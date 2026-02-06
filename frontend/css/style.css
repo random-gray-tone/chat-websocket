@@ -746,7 +746,7 @@ body{
     width:auto;
     height:auto;
     display: none;
-    flex-direction: row;
+    flex-direction: column;
     background-color: #837b7b;
     border-radius: 15px;
     padding: 40px;
