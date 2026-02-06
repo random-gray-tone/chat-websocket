@@ -394,7 +394,7 @@ ${content}`)
         usuarioentrou.name=user.name
         usuarioentrou.id=user.id
         usuarioentrou.sala=user.room
-        websocket = new WebSocket("wss://quickroomchat.onrender.com")
+        websocket = new WebSocket("wss://chat-websocket-98oh.onrender.com")
         
         
         //websocket.send(JSON.stringify(usuarioentrou))
@@ -423,7 +423,7 @@ ${content}`)
         containeroptions.style.display='grid'
         criar.style.display='none'
         chat.style.display='flex'
-        websocket = new WebSocket("wss://quickroomchat.onrender.com")
+        websocket = new WebSocket("wss://chat-websocket-98oh.onrender.com")
         websocket.onmessage=processMessage
         websocket.onopen=()=> websocket.send(JSON.stringify(room))
         //usuario.innerText=user.name[0]
