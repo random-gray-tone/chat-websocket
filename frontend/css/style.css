@@ -742,7 +742,7 @@ body{
     backdrop-filter: blur(10px);
     width:70vw;
     height:auto;
-    
+    max-width:200px;
     display: none;
     flex-direction: row;
     background-color: #837b7b;
