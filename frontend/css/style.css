@@ -740,7 +740,8 @@ body{
 }
 .zoomfotoperfilmensagem{
     backdrop-filter: blur(10px);
-    width:100%;
+    width:auto;
+    height:auto;
     
     display: none;
     flex-direction: row;
